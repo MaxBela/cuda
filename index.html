@@ -11,13 +11,18 @@
    <div class="header-page">
       <div class="container">
          <div class="header-page-nav-block d-flex">
-            <img src="img/main-logo.png" alt="">
-            <nav class="header-page_nav d-flex ali-center">
-            <a class="header-page_nav-item">home</a>
-            <a class="header-page_nav-item">about</a>
-            <a class="header-page_nav-item">work</a>
-            <a class="header-page_nav-item">blog</a>
-            <a class="header-page_nav-item">contact</a>
+            <img class="cuda-img" src="img/main-logo.png" alt="">
+            <nav class="nav-bar header-page_nav d-flex ali-center">
+               <div class="nav-container">
+                        <a class="nav-menu" id="nav-menu">☰ </a>
+                  <ul class="nav-list " id="nav">
+                     <li><a class="header-page_nav-item">home</a></li>
+                     <li><a class="header-page_nav-item">about</a></li>
+                     <li><a class="header-page_nav-item">work</a></li>
+                     <li><a class="header-page_nav-item">blog</a></li>
+                     <li><a class="header-page_nav-item">contact</a></li>
+                  </ul>    
+               </div>    
          </nav>
          </div>
          
@@ -173,7 +178,7 @@
             </div>
 
             <div class="graphics-block_item d-flex">
-               <img src="img/green.png" alt="">
+               <img class="procents" src="img/13 копія.PNG" alt="">
                <span class="graphics-block_item-text">GRAPHIC DESIGN</span>
             </div>
 
@@ -340,5 +345,13 @@
      $( "#tabs" ).tabs();
    } );
    </script>
+<script>
+   $(document).ready(function(){
+   $('#nav-menu').click(function(){
+       $('ul.nav-list').addClass('nav-open').slideToggle('300');
+   });
+});
+</script>
+
 </body>
 </html>
