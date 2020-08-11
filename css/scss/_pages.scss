@@ -5,7 +5,7 @@ body {
 .header-page {
    background-color: #87509c;
    padding: 55px 0 148px 0;
-   height: 675px;
+   position: relative;
 
    li {
       border-radius: 5px;
@@ -50,6 +50,8 @@ body {
       & a {
          color: #fff;
       }
+      color: #fff !important;
+      width: fit-content;
       padding: 25px 80px;
       display: block;
       margin: 60px auto 0;
@@ -58,12 +60,11 @@ body {
       font-size: 18px;
       font-weight: 700;
       border-bottom: 4px solid #c86a40;
+      transition: all 0.3s ease-in;
 
       &:hover {
-         padding: 26px 81px;
-         position: relative;
-         top: -5px;
-         box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.4);
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.6);
       }
    }
 }
@@ -110,13 +111,14 @@ body {
    text-align: center;
    font-size: 40px;
    font-weight: 700;
-
+   color: inherit;
 }
 
 .page_line {
    width: 85px;
    border-bottom: 4px solid rgba($color: #000000, $alpha: 0.3);
    margin: 20px auto;
+   color: inherit;
 }
 
 .page_p {
@@ -124,6 +126,7 @@ body {
    font-size: 18px;
    width: 590px;
    margin: 0 auto;
+   color: inherit;
 }
 
 .team-page {
@@ -232,10 +235,10 @@ body {
 .our-portfolio {
    background: #ffdd99;
    padding: 120px 0;
-   height: 1406px;
 }
 
 .btn-block {
+   color: #fff;
    margin: 0 auto;
    display: flex;
    justify-content: center;
@@ -251,12 +254,10 @@ body {
    font-size: 18px;
    text-transform: uppercase;
    border-bottom: 4px solid #14a58c;
-
+   transition: all 0.3s ease-in;
    &:hover {
-      padding: 26px 87px;
-      position: relative;
-      top: -5px;
-      box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.4);
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.6);
    }
 }
 
@@ -264,7 +265,7 @@ body {
    display: flex;
    justify-content: center;
    margin-top: 40px;
-  
+   color: #393939;
 }
 
 .ui-tabs-tab {
@@ -365,7 +366,6 @@ body {
 }
 
 .footer {
-   height: 915px;
    padding: 120px 0;
    background: #3c5499;
    color: #fff;
@@ -485,12 +485,11 @@ body {
       font-size: 18px;
       text-transform: uppercase;
       border-bottom: 4px solid #299ec5;
+      transition: all 0.3s ease-in;
 
       &:hover {
-         padding: 26px 86px;
-         position: relative;
-         top: -5px;
-         box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.4);
+         transform: scale(1.1);
+         box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.6);
       }
    }
 
@@ -559,7 +558,9 @@ body {
    .footer-textarea {
       width: 860px;
   }
-
+  .our-portfolio {
+     height: fit-content;
+  }
   
    
 }
@@ -577,6 +578,18 @@ body {
 
 
 @media ( max-width:901px) {
+
+
+
+
+   .footer-foot_anchor + .footer-foot_anchor {
+      margin-left: auto;
+  }
+
+   .team-page_item-href + .team-page_item-href {
+      margin-left: 2px;
+  }
+
    .services-page_item {
       width: 20%;
    }
@@ -624,7 +637,7 @@ body {
 
    .footer-foot_anchors {
          width: 90%;
-      margin: 0 2%;
+      margin: 0 5%;
       width: none;
    }
 
@@ -640,6 +653,9 @@ body {
 }
 
 @media (max-width: 768px) {
+
+
+   
 
    .page_p {
       width: auto;
@@ -659,7 +675,7 @@ body {
    // }
 
    .footer-foot_anchor + .footer-foot_anchor {
-      margin-left: 42px;
+      margin-left: auto;
   }
 
   .team-page_item-href + .team-page_item-href {
@@ -667,7 +683,34 @@ body {
 }
 }
 
+@media (max-width:650px) {
+
+   .services-page_item img {
+      height: 150px;
+   }
+
+   .page_h2 {
+      font-size: 25px;
+   }
+   .services-page_item-name {
+      font-size: 16px;
+  }
+
+  .about-us_text {
+     width: 75%;
+  }
+
+  .team-page_item-name {
+     font-size: 18px;
+  }
+}
+
 @media (max-width:480px) {
+
+   .header-page {
+      padding-bottom: 60px;
+   }
+
    .header-page_h1 {
    margin: 70px 30px;
    font-size: 27px;}
@@ -760,7 +803,7 @@ body {
   }
 
   .header-page {
-   padding: 40px 0 60px 0;
+   padding: 40px 0 30px 0;
 }
 
 .services-page {
@@ -904,17 +947,18 @@ body {
    
   
    .nav-list{
-      position: fixed;
-      right: 222px;
-    top: 82px;
+     
+      right: 257px;
+      top: 13px;
    float: right; 
-   width: 30%;
+   width: 47%;
    overflow: hidden;
    height: 0;
    border-radius: 10px;
    }
    
-   .nav-open{ height: auto; }
+   .nav-open
+   { height: auto; }
    
    .nav-list li {
        width: 100%;
@@ -922,7 +966,9 @@ body {
 
    .nav-open {
       background: #79428e;
-
+      position: absolute;
+      left: -260px;
+      top: 46px;
    }
    .nav-bar {
       font-family: 'dialog';
